@@ -1,0 +1,10 @@
+.entete {
+    font-family:Shrikhand;
+    text-align:center;
+    font-size:2em;
+}
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('police/Shrikhand-Regular.ttf') format('truetype');
+}
