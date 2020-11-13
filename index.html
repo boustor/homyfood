@@ -14,9 +14,7 @@
 
     <header>
 
-        <div class="entete">
-            <span>ohmyfood</span>
-        </div>
+        <h1 class="titrePage">ohmyfood</h1>
         <div class="lieu">
             <i class="fas fa-map-marker-alt"></i> &nbsp; Paris, Belleville
         </div>
@@ -25,21 +23,51 @@
 
     <main>
 
-        <div class="titre">
-            <span class="titre1">Réservez le menu qui vous convient</span>
-            <br>
-            <span class="titre2">Découvrez des restaurants d'exception, séléctionnés par nos soins.</span>
-            <br>
-            <form action="#restaurants" class="titreform"><button class="titrebut">Explorer nos restaurants</button></form>
-        </div>
-        <div>
-
-            <div id="restaurants">coucou le resto</div>
-        </div>
+        <section class="presentation">
+            <span class="presentationUne">Réservez le menu qui vous convient</span>
+            <span class="presentationDeux">Découvrez des restaurants d'exception, séléctionnés par nos soins.</span>
+            <form action="#restaurants" class="presentationBouton"><button class="presentationBoutonGraph">Explorer nos restaurants</button></form>
+        </section>
+        <!-- Affichage des trois boutons fonctionnement -->
+        <section>
+            <h2 class="titreChapitre">Fonctionnement</h2>
+            <section class="fonctionnement">
+                <div class="fonctionnementCadre">
+                    <div class="fonctionnementCadreLigne">
+                        <div class="fonctionnementNumero">1</div>
+                        <div><i class="fas fa-mobile-alt"></i></div>
+                        <div>Choisissez un restaurant</div>
+                    </div>
+                </div>
+                <div class="fonctionnementCadre">
+                    <div class="fonctionnementCadreLigne">
+                        <div class="fonctionnementNumero">2</div>
+                        <i class="fas fa-list-ul"></i>
+                        <div>Composez votre menu</div>
+                    </div>
+                </div>
+                <div class="fonctionnementCadre">
+                    <div class="fonctionnementCadreLigne">
+                        <div class="fonctionnementNumero">3</div>
+                        <i class="fas fa-store"></i>
+                        <div>Dégustez au restaurant</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section>
+            <h2 id="restaurants" class="titreChapitre">restaurants</h2>
+        </section>
     </main>
 
     <footer>
-
+        <h2 class="footerTitre">ohmyfood</h2>
+        <ul class="footerMenu">
+            <li><i class="fas fa-utensils"></i>&nbsp; Proposer un restaurant</li>
+            <li> <i class="fas fa-hands-helping"></i>&nbsp; Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li>Contact</li>
+        </ul>
     </footer>
 </body>
 
