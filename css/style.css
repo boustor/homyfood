@@ -3,12 +3,25 @@ body {
 }
 
 .titrePage {
-    font-family: Shrikhand;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    font-size: 2em;
+    align-items: center;
     height: 60px;
+}
+
+.titrePageFleche {
+    font-size: 0.6em;
+    position: absolute;
+    left: 30px;
+    color: #353535;
+}
+
+.titrePageLien {
+    margin-top: -20px;
+}
+
+.titrePageImage {
+    width: 160px;
 }
 
 .lieu {
@@ -121,7 +134,25 @@ body {
     width: 335px;
     height: 250px;
     background-color: white;
-    margin-bottom: 10px;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+}
+
+.boiteRestaurantImage {
+    height: 175px;
+    width: 335px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.boiteRestaurantImages {
+    margin-top: -40px;
+    width: 100%;
+}
+
+.boiteRestaurantImagesPlus {
+    margin-top: -45%;
+    width: 100%;
 }
 
 
