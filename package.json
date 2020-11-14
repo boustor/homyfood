@@ -1,0 +1,19 @@
+{
+    "name": "homyfood",
+    "version": "1.0.0",
+    "description": "formation homyfood",
+    "main": "index.html",
+    "scripts": {
+        "sass": "sass --watch ./css/sass/main.scss:./css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/boustor/homyfood.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/boustor/homyfood/issues"
+    },
+    "homepage": "https://github.com/boustor/homyfood#readme"
+}
