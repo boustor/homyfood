@@ -44,6 +44,11 @@ footer {
   padding-bottom: 10px;
 }
 
+body {
+  margin: auto;
+  max-width: 1024px;
+}
+
 .titrePage {
   display: flex;
   justify-content: center;
@@ -83,7 +88,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: #f6f6f6;
   height: 285px;
   font-family: roboto;
   font-size: small;
@@ -137,7 +142,8 @@ footer {
   align-items: center;
   border-radius: 20px;
   background-color: #f6f6f6;
-  width: 325px;
+  max-width: 325px;
+  min-width: 260px;
   height: 75px;
   font-family: roboto-med;
   margin-bottom: 15px;
@@ -159,7 +165,7 @@ footer {
   width: 25px;
   height: 25px;
   border-radius: 25px;
-  background-color: #9356DC;
+  background-color: #9356dc;
   font-size: 15px;
   color: white;
 }
@@ -167,6 +173,10 @@ footer {
 /* ********** les boites des restaurants ********** */
 .listeRestaurant {
   background-color: #f6f6f6;
+}
+.listeRestaurant a {
+  text-decoration: none;
+  color: black;
 }
 
 .boiteRestaurant {
@@ -192,6 +202,114 @@ footer {
 .boiteRestaurantImagesPlus {
   margin-top: -45%;
   width: 100%;
+}
+
+.BoiteRestaurantTitre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px 0 15px;
+}
+
+.BoiteRestaurantTitreGauche {
+  display: flex;
+  flex-direction: column;
+  font-family: roboto;
+}
+
+.BoiteRestaurantLigne {
+  font-family: roboto-bold;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.coeur {
+  font-size: 1.4em;
+  margin-right: 30px;
+}
+
+/* ********** images présentation des autres pages ********** */
+.imageEntete {
+  height: 260px;
+  width: 100%;
+  z-index: 0;
+}
+
+/* ********** menu des autres pages ********** */
+.menuPage {
+  position: relative;
+  border-radius: 40px;
+  background-color: #f6f6f6;
+  margin-top: -40px;
+  z-index: 1;
+}
+
+.titreMenu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 15px;
+}
+
+.titreMenuGauche {
+  font-family: Shrikhand;
+  font-size: 1.5em;
+}
+
+/* ********** boites des plats ********** */
+.boitesMenuPlat {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuPageTitre {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: solid #99e2d0;
+  width: 40px;
+}
+
+.menuPageTitreP {
+  padding-top: 30px;
+}
+
+.menuPlat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70px;
+  max-width: 350px;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto 10px auto;
+}
+
+.platLigneTitre {
+  font-family: roboto-bold;
+  padding-left: 15px;
+}
+
+.platLignePrix {
+  display: flex;
+  justify-content: space-between;
+  font-family: roboto;
+  padding: 0 15px;
+}
+.platLignePrix .prix {
+  font-weight: bold;
+}
+
+.presentationBoutonGraphPosition {
+  display: flex;
+  align-items: center;
+}
+
+.presentationBoutonGraphMenu {
+  width: 185px;
+  margin: 30px auto 80px auto;
 }
 
 /*# sourceMappingURL=style.css.map */
