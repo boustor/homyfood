@@ -1,0 +1,75 @@
+.coeur {
+    font-size: 1.4em;
+    margin-right: 30px;
+}
+
+.animeCoeur .coeurAnime {
+    display: none;
+}
+
+.animeCoeur:hover .coeurCacher {
+    display: none;
+}
+
+.animeCoeur:hover .coeurAnime {
+    display: inline;
+}
+
+.coeurAnime {
+    display: none;
+    background: linear-gradient(to right top, white 0%, $boutonPrimaire, $boutonSecondaire);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: Animation 1s ease;
+}
+
+@keyframes Animation {
+    0% {
+        background: linear-gradient( to right top, white 100%, $boutonSecondaire 0%, $boutonPrimaire 0%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    $pourc: 10% 90%,
+    20% 80%,
+    30% 70%,
+    40% 60%,
+    50% 50%,
+    60% 40%,
+    70% 30%,
+    80% 20%,
+    90% 10%;
+    @each $a,
+    $b in $pourc {
+        #{$a} {
+            background: linear-gradient(to right top, white $b, $boutonSecondaire $a, $boutonPrimaire $a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    100% {
+        background: linear-gradient(to right top, white 0%, $boutonSecondaire 100%, $boutonPrimaire 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.pourlanimation {
+    animation-duration: 5s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}

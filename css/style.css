@@ -1,22 +1,24 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Shrikhand";
-  src: url("police/Shrikhand-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("police/Roboto-light.ttf") format("truetype"), url("police/Roboto-bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-bold";
-  src: url("police/Roboto-bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-med";
-  src: url("police/Roboto-Medium.ttf") format("truetype");
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 body {
   margin: 0;
+  max-width: 1024px;
+  /*
+  opacity: 0;
+  /* animation: fadein 5s;*/
+  /*
+  transition-property: background;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.3s;
+  opacity:1; */
 }
 
 footer {
@@ -44,9 +46,181 @@ footer {
   padding-bottom: 10px;
 }
 
-body {
-  margin: auto;
-  max-width: 1024px;
+@font-face {
+  font-family: "Shrikhand";
+  src: url("police/Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("police/Roboto-light.ttf") format("truetype"), url("police/Roboto-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-bold";
+  src: url("police/Roboto-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-med";
+  src: url("police/Roboto-Medium.ttf") format("truetype");
+}
+.coeur {
+  font-size: 1.4em;
+  margin-right: 30px;
+}
+
+.animeCoeur .coeurAnime {
+  display: none;
+}
+
+.animeCoeur:hover .coeurCacher {
+  display: none;
+}
+
+.animeCoeur:hover .coeurAnime {
+  display: inline;
+}
+
+.coeurAnime {
+  display: none;
+  background: linear-gradient(to right top, white 0%, #FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: Animation 1s ease;
+}
+
+@keyframes Animation {
+  0% {
+    background: linear-gradient(to right top, white 100%, #9356DC 0%, #FF79DA 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  10% {
+    background: linear-gradient(to right top, white 90%, #9356DC 10%, #FF79DA 10%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    background: linear-gradient(to right top, white 80%, #9356DC 20%, #FF79DA 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  30% {
+    background: linear-gradient(to right top, white 70%, #9356DC 30%, #FF79DA 30%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  40% {
+    background: linear-gradient(to right top, white 60%, #9356DC 40%, #FF79DA 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(to right top, white 50%, #9356DC 50%, #FF79DA 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  60% {
+    background: linear-gradient(to right top, white 40%, #9356DC 60%, #FF79DA 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  70% {
+    background: linear-gradient(to right top, white 30%, #9356DC 70%, #FF79DA 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  80% {
+    background: linear-gradient(to right top, white 20%, #9356DC 80%, #FF79DA 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  90% {
+    background: linear-gradient(to right top, white 10%, #9356DC 90%, #FF79DA 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(to right top, white 0%, #9356DC 100%, #FF79DA 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.pourlanimation {
+  animation-duration: 5s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.selection {
+  height: 70px;
+  width: 35px;
+  background-color: #99E2D0;
+}
+
+/* ********** boites des plats ********** */
+.boitesMenuPlat {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuPageTitre {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: solid #99e2d0;
+  width: 40px;
+}
+
+.menuPageTitreP {
+  padding-top: 30px;
+}
+
+.menuPlat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70px;
+  max-width: 350px;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto 10px auto;
+}
+
+.platLigneTitre {
+  font-family: roboto-bold;
+  padding-left: 15px;
+}
+
+.platLignePrix {
+  display: flex;
+  justify-content: space-between;
+  font-family: roboto;
+  padding: 0 15px;
+}
+.platLignePrix .prix {
+  font-weight: bold;
 }
 
 .titrePage {
@@ -221,11 +395,6 @@ body {
   font-family: roboto-bold;
   font-size: 1em;
   font-weight: bold;
-}
-
-.coeur {
-  font-size: 1.4em;
-  margin-right: 30px;
 }
 
 /* ********** images présentation des autres pages ********** */

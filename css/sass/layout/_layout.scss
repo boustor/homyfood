@@ -1,279 +1,257 @@
-body {
-    margin: auto;
-    max-width: 1024px;
-}
-
-.titrePage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-}
-
-.titrePageFleche {
-    font-size: 0.6em;
-    position: absolute;
-    left: 30px;
-    color: $grisf;
-}
-
-.titrePageLien {
-    margin-top: -20px;
-}
-
-.titrePageImage {
-    width: 160px;
-}
-
-.lieu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: roboto;
-    background-color: #e9e9e9;
-    box-shadow: inset 0 3px #d1d1d1;
-    height: 50px;
-    width: 100%;
-    font-weight: bold;
-}
-
-
-/* ----- présentation ----- */
-
-.presentation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #f6f6f6;
-    height: 285px;
-    font-family: $policeTexte;
-    font-size: small;
-}
-
-.presentationUne {
-    font-weight: bold;
-    font-family: $policeTexteG;
-    font-size: 1.8em;
-    width: 75%;
-    text-align: center;
-    margin: 0 auto 15px auto;
-}
-
-.presentationDeux {
-    width: 80%;
-    text-align: center;
-    font-size: 1.3em;
-    margin: 0 auto 30px auto;
-}
-
-.presentationBouton {
-    display: flex;
-    justify-content: center;
-}
-
-.presentationBoutonGraph {
-    border: 0;
-    height: 50px;
-    border-radius: 30px;
-    padding: 0 20px 0 20px;
-    font-family: $policeTexteM;
-    color: white;
-    font-size: 1.1em;
-    background: linear-gradient(to bottom right, $boutonPrimaire, $boutonSecondaire);
-}
-
-.titreChapitre {
-    margin-left: 15px;
-}
-
-
-/* ********** partie fonctionnement ********** */
-
-.fonctionnement {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.fonctionnementCadre {
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    background-color: #f6f6f6;
-    max-width: 325px;
-    min-width: 260px;
-    height: 75px;
-    font-family: roboto-med;
-    margin-bottom: 15px;
-    box-shadow: 0.3em 0.3em 0.3em #ededed;
-}
-
-.fonctionnementCadreLigne {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 270px;
-    margin-left: -20px;
-}
-
-.fonctionnementNumero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
-    background-color: #9356dc;
-    font-size: 15px;
-    color: white;
-}
-
-
-/* ********** les boites des restaurants ********** */
-
-.listeRestaurant {
-    background-color: #f6f6f6;
-    a {
-        text-decoration: none;
-        color: black;
+    .titrePage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
     }
-}
-
-.boiteRestaurant {
-    width: 335px;
-    height: 250px;
-    background-color: white;
-    margin: 0 auto 20px auto;
-    border-radius: 20px;
-}
-
-.boiteRestaurantImage {
-    height: 175px;
-    width: 335px;
-    overflow: hidden;
-    border-radius: 20px 20px 0 0;
-}
-
-.boiteRestaurantImages {
-    margin-top: -40px;
-    width: 100%;
-}
-
-.boiteRestaurantImagesPlus {
-    margin-top: -45%;
-    width: 100%;
-}
-
-.BoiteRestaurantTitre {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 25px 0 15px;
-}
-
-.BoiteRestaurantTitreGauche {
-    display: flex;
-    flex-direction: column;
-    font-family: $policeTexte;
-}
-
-.BoiteRestaurantLigne {
-    font-family: $policeTexteG;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-.coeur {
-    font-size: 1.4em;
-    margin-right: 30px;
-}
-
-
-/* ********** images présentation des autres pages ********** */
-
-.imageEntete {
-    height: 260px;
-    width: 100%;
-    z-index: 0;
-}
-
-
-/* ********** menu des autres pages ********** */
-
-.menuPage {
-    position: relative;
-    border-radius: 40px;
-    background-color: $couleurFondPlats;
-    margin-top: -40px;
-    z-index: 1;
-}
-
-.titreMenu {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 15px;
-}
-
-.titreMenuGauche {
-    font-family: $policeTitre;
-    font-size: 1.5em;
-}
-
-
-/* ********** boites des plats ********** */
-
-.boitesMenuPlat {
-    display: flex;
-    flex-direction: column;
-}
-
-.menuPageTitre {
-    margin-left: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: solid $soulignerTitreMenu;
-    width: 40px;
-}
-
-.menuPageTitreP {
-    padding-top: 30px;
-}
-
-.menuPlat {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 70px;
-    max-width: 350px;
-    min-width: 300px;
-    background-color: $couleurFondPlat;
-    border-radius: 20px;
-    margin: 0 auto 10px auto;
-}
-
-.platLigneTitre {
-    font-family: $policeTexteG;
-    padding-left: 15px;
-}
-
-.platLignePrix {
-    display: flex;
-    justify-content: space-between;
-    font-family: $policeTexte;
-    padding: 0 15px;
-    .prix {
+    
+    .titrePageFleche {
+        font-size: 0.6em;
+        position: absolute;
+        left: 30px;
+        color: $grisf;
+    }
+    
+    .titrePageLien {
+        margin-top: -20px;
+    }
+    
+    .titrePageImage {
+        width: 160px;
+    }
+    
+    .lieu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: roboto;
+        background-color: #e9e9e9;
+        box-shadow: inset 0 3px #d1d1d1;
+        height: 50px;
+        width: 100%;
         font-weight: bold;
     }
-}
-
-.presentationBoutonGraphPosition {
-    display: flex;
-    align-items: center;
-}
-
-.presentationBoutonGraphMenu {
-    width: 185px;
-    margin: 30px auto 80px auto;
-}
+    /* ----- présentation ----- */
+    
+    .presentation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #f6f6f6;
+        height: 285px;
+        font-family: $policeTexte;
+        font-size: small;
+    }
+    
+    .presentationUne {
+        font-weight: bold;
+        font-family: $policeTexteG;
+        font-size: 1.8em;
+        width: 75%;
+        text-align: center;
+        margin: 0 auto 15px auto;
+    }
+    
+    .presentationDeux {
+        width: 80%;
+        text-align: center;
+        font-size: 1.3em;
+        margin: 0 auto 30px auto;
+    }
+    
+    .presentationBouton {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .presentationBoutonGraph {
+        border: 0;
+        height: 50px;
+        border-radius: 30px;
+        padding: 0 20px 0 20px;
+        font-family: $policeTexteM;
+        color: white;
+        font-size: 1.1em;
+        background: linear-gradient(to bottom right, $boutonPrimaire, $boutonSecondaire);
+    }
+    
+    .titreChapitre {
+        margin-left: 15px;
+    }
+    /* ********** partie fonctionnement ********** */
+    
+    .fonctionnement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .fonctionnementCadre {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #f6f6f6;
+        max-width: 325px;
+        min-width: 260px;
+        height: 75px;
+        font-family: roboto-med;
+        margin-bottom: 15px;
+        box-shadow: 0.3em 0.3em 0.3em #ededed;
+    }
+    
+    .fonctionnementCadreLigne {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 270px;
+        margin-left: -20px;
+    }
+    
+    .fonctionnementNumero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: #9356dc;
+        font-size: 15px;
+        color: white;
+    }
+    /* ********** les boites des restaurants ********** */
+    
+    .listeRestaurant {
+        background-color: #f6f6f6;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    
+    .boiteRestaurant {
+        width: 335px;
+        height: 250px;
+        background-color: white;
+        margin: 0 auto 20px auto;
+        border-radius: 20px;
+    }
+    
+    .boiteRestaurantImage {
+        height: 175px;
+        width: 335px;
+        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .boiteRestaurantImages {
+        margin-top: -40px;
+        width: 100%;
+    }
+    
+    .boiteRestaurantImagesPlus {
+        margin-top: -45%;
+        width: 100%;
+    }
+    
+    .BoiteRestaurantTitre {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px 0 15px;
+    }
+    
+    .BoiteRestaurantTitreGauche {
+        display: flex;
+        flex-direction: column;
+        font-family: $policeTexte;
+    }
+    
+    .BoiteRestaurantLigne {
+        font-family: $policeTexteG;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    /* ********** images présentation des autres pages ********** */
+    
+    .imageEntete {
+        height: 260px;
+        width: 100%;
+        z-index: 0;
+    }
+    /* ********** menu des autres pages ********** */
+    
+    .menuPage {
+        position: relative;
+        border-radius: 40px;
+        background-color: $couleurFondPlats;
+        margin-top: -40px;
+        z-index: 1;
+    }
+    
+    .titreMenu {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 15px;
+    }
+    
+    .titreMenuGauche {
+        font-family: $policeTitre;
+        font-size: 1.5em;
+    }
+    /* ********** boites des plats ********** */
+    
+    .boitesMenuPlat {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menuPageTitre {
+        margin-left: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: solid $soulignerTitreMenu;
+        width: 40px;
+    }
+    
+    .menuPageTitreP {
+        padding-top: 30px;
+    }
+    
+    .menuPlat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70px;
+        max-width: 350px;
+        min-width: 300px;
+        background-color: $couleurFondPlat;
+        border-radius: 20px;
+        margin: 0 auto 10px auto;
+    }
+    
+    .platLigneTitre {
+        font-family: $policeTexteG;
+        padding-left: 15px;
+    }
+    
+    .platLignePrix {
+        display: flex;
+        justify-content: space-between;
+        font-family: $policeTexte;
+        padding: 0 15px;
+        .prix {
+            font-weight: bold;
+        }
+    }
+    
+    .presentationBoutonGraphPosition {
+        display: flex;
+        align-items: center;
+    }
+    
+    .presentationBoutonGraphMenu {
+        width: 185px;
+        margin: 30px auto 80px auto;
+    }
