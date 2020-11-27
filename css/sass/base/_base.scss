@@ -21,6 +21,10 @@ body {
     opacity:1; */
 }
 
+a {
+    text-decoration: none;
+}
+
 footer {
     background-color: $grisf;
     height: 195px;
@@ -44,4 +48,8 @@ footer {
 
 .footerMenu li {
     padding-bottom: 10px;
+}
+
+.footerContact {
+    color: white;
 }

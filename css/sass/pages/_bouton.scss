@@ -1,0 +1,32 @@
+.presentationBouton {
+    display: flex;
+    justify-content: center;
+}
+
+.presentationBoutonGraph {
+    border: 0;
+    height: 50px;
+    border-radius: 30px;
+    padding: 0 20px 0 20px;
+    font-family: $policeTexteM;
+    color: white;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.33);
+    background: linear-gradient(to bottom right, $boutonPrimaire, $boutonSecondaire);
+    &:hover {
+        box-shadow: 2px 2px 10px 7px rgba(0, 0, 0, 0.33);
+        transition: all .4s ease;
+        cursor: pointer;
+        opacity: .9;
+    }
+}
+
+.presentationBoutonGraphPosition {
+    display: flex;
+    align-items: center;
+}
+
+.presentationBoutonGraphMenu {
+    width: 185px;
+    margin: 30px auto 80px auto;
+}

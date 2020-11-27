@@ -21,6 +21,10 @@ body {
   opacity:1; */
 }
 
+a {
+  text-decoration: none;
+}
+
 footer {
   background-color: #353535;
   height: 195px;
@@ -44,6 +48,10 @@ footer {
 
 .footerMenu li {
   padding-bottom: 10px;
+}
+
+.footerContact {
+  color: white;
 }
 
 @font-face {
@@ -157,21 +165,6 @@ footer {
     -webkit-text-fill-color: transparent;
   }
 }
-.pourlanimation {
-  animation-duration: 5s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
 .selection {
   height: 70px;
   width: 35px;
@@ -179,6 +172,21 @@ footer {
 }
 
 /* ********** boites des plats ********** */
+@keyframes animeBoite {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 15px;
+    width: 100%;
+  }
+}
+.boiteMenu {
+  display: flex;
+  justify-content: center;
+}
+
 .boitesMenuPlat {
   display: flex;
   flex-direction: column;
@@ -208,6 +216,24 @@ footer {
   margin: 0 auto 10px auto;
 }
 
+.menuPlatE {
+  animation-delay: 0s;
+  animation-duration: 4s;
+  animation-name: animeBoite;
+}
+
+.menuPlatP {
+  animation-delay: 2s;
+  animation-duration: 4s;
+  animation-name: animeBoite;
+}
+
+.menuPlatD {
+  animation-delay: 4s;
+  animation-duration: 4s;
+  animation-name: animeBoite;
+}
+
 .platLigneTitre {
   font-family: roboto-bold;
   padding-left: 15px;
@@ -221,6 +247,39 @@ footer {
 }
 .platLignePrix .prix {
   font-weight: bold;
+}
+
+.presentationBouton {
+  display: flex;
+  justify-content: center;
+}
+
+.presentationBoutonGraph {
+  border: 0;
+  height: 50px;
+  border-radius: 30px;
+  padding: 0 20px 0 20px;
+  font-family: roboto-M;
+  color: white;
+  font-size: 1.1em;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.33);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+}
+.presentationBoutonGraph:hover {
+  box-shadow: 2px 2px 10px 7px rgba(0, 0, 0, 0.33);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.presentationBoutonGraphPosition {
+  display: flex;
+  align-items: center;
+}
+
+.presentationBoutonGraphMenu {
+  width: 185px;
+  margin: 30px auto 80px auto;
 }
 
 .titrePage {
@@ -282,22 +341,6 @@ footer {
   text-align: center;
   font-size: 1.3em;
   margin: 0 auto 30px auto;
-}
-
-.presentationBouton {
-  display: flex;
-  justify-content: center;
-}
-
-.presentationBoutonGraph {
-  border: 0;
-  height: 50px;
-  border-radius: 30px;
-  padding: 0 20px 0 20px;
-  font-family: roboto-M;
-  color: white;
-  font-size: 1.1em;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
 .titreChapitre {
@@ -424,61 +467,6 @@ footer {
 .titreMenuGauche {
   font-family: Shrikhand;
   font-size: 1.5em;
-}
-
-/* ********** boites des plats ********** */
-.boitesMenuPlat {
-  display: flex;
-  flex-direction: column;
-}
-
-.menuPageTitre {
-  margin-left: 15px;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
-  border-bottom: solid #99e2d0;
-  width: 40px;
-}
-
-.menuPageTitreP {
-  padding-top: 30px;
-}
-
-.menuPlat {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 70px;
-  max-width: 350px;
-  min-width: 300px;
-  background-color: white;
-  border-radius: 20px;
-  margin: 0 auto 10px auto;
-}
-
-.platLigneTitre {
-  font-family: roboto-bold;
-  padding-left: 15px;
-}
-
-.platLignePrix {
-  display: flex;
-  justify-content: space-between;
-  font-family: roboto;
-  padding: 0 15px;
-}
-.platLignePrix .prix {
-  font-weight: bold;
-}
-
-.presentationBoutonGraphPosition {
-  display: flex;
-  align-items: center;
-}
-
-.presentationBoutonGraphMenu {
-  width: 185px;
-  margin: 30px auto 80px auto;
 }
 
 /*# sourceMappingURL=style.css.map */

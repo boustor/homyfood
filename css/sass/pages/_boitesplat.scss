@@ -1,45 +1,79 @@
- /* ********** boites des plats ********** */
- 
- .boitesMenuPlat {
-     display: flex;
-     flex-direction: column;
- }
- 
- .menuPageTitre {
-     margin-left: 15px;
-     margin-bottom: 15px;
-     padding-bottom: 5px;
-     border-bottom: solid $soulignerTitreMenu;
-     width: 40px;
- }
- 
- .menuPageTitreP {
-     padding-top: 30px;
- }
- 
- .menuPlat {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     height: 70px;
-     max-width: 350px;
-     min-width: 300px;
-     background-color: $couleurFondPlat;
-     border-radius: 20px;
-     margin: 0 auto 10px auto;
- }
- 
- .platLigneTitre {
-     font-family: $policeTexteG;
-     padding-left: 15px;
- }
- 
- .platLignePrix {
-     display: flex;
-     justify-content: space-between;
-     font-family: $policeTexte;
-     padding: 0 15px;
-     .prix {
-         font-weight: bold;
-     }
- }
+/* ********** boites des plats ********** */
+
+@keyframes animeBoite {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+    to {
+        margin-left: 15px;
+        width: 100%;
+    }
+}
+
+.boiteMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.boitesMenuPlat {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuPageTitre {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: solid $soulignerTitreMenu;
+    width: 40px;
+}
+
+.menuPageTitreP {
+    padding-top: 30px;
+}
+
+.menuPlat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70px;
+    max-width: 350px;
+    min-width: 300px;
+    background-color: $couleurFondPlat;
+    border-radius: 20px;
+    margin: 0 auto 10px auto;
+}
+
+.menuPlatE {
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-name: animeBoite;
+}
+
+.menuPlatP {
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-name: animeBoite;
+}
+
+.menuPlatD {
+    animation-delay: 4s;
+    animation-duration: 4s;
+    animation-name: animeBoite;
+}
+
+.platLigneTitre {
+    font-family: $policeTexteG;
+    padding-left: 15px;
+}
+
+.platLignePrix {
+    display: flex;
+    justify-content: space-between;
+    font-family: $policeTexte;
+    padding: 0 15px;
+    .prix {
+        font-weight: bold;
+    }
+}
