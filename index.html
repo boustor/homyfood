@@ -10,18 +10,22 @@
     <title>Ho my food</title>
 </head>
 
+
 <body>
 
     <header>
-
-        <h1 class="titrePage">ohmyfood</h1>
-        <div class="lieu">
-            <span class="fas fa-map-marker-alt"></span> &nbsp; Paris, Belleville
-        </div>
-
+        <section id="chargement">
+            <div class="loaderEntree"></div>
+        </section>
+        <section id="entete">
+            <h1 class="titrePage">ohmyfood</h1>
+            <div class="lieu">
+                <span class="fas fa-map-marker-alt"></span> &nbsp; Paris, Belleville
+            </div>
+        </section>
     </header>
 
-    <main>
+    <main id="main">
 
         <section class="presentation">
             <span class="presentationUne">Réservez le menu qui vous convient</span>
@@ -63,8 +67,11 @@
             </header>
             <a href="palette_du_gout.html">
                 <div class="boiteRestaurant">
-                    <div class="boiteRestaurantImage">
-                        <img src="images/la_palette_du_gout.jpg" class="boiteRestaurantImages" alt="La palette du goût">
+                    <div class="boiteRestaurantImagePosition">
+                        <div class="boiteRestaurantImage">
+                            <img src="images/la_palette_du_gout.jpg" class="boiteRestaurantImages" alt="La palette du goût">
+                        </div>
+                        <div class="nouveau">Nouveau</div>
                     </div>
                     <div class="BoiteRestaurantTitre">
                         <div class="BoiteRestaurantTitreGauche">
@@ -80,8 +87,11 @@
             </a>
             <a href="note_enchantee.html">
                 <div class="boiteRestaurant">
-                    <div class="boiteRestaurantImage">
-                        <img src="images/la_note_enchantee.jpg" class="boiteRestaurantImagesPlus" alt="La note enchantée">
+                    <div class="boiteRestaurantImagePosition">
+                        <div class="boiteRestaurantImage">
+                            <img src="images/la_note_enchantee.jpg" class="boiteRestaurantImagesPlus" alt="La note enchantée">
+                        </div>
+                        <div class="nouveau">Nouveau</div>
                     </div>
                     <div class="BoiteRestaurantTitre">
                         <div class="BoiteRestaurantTitreGauche">
@@ -129,10 +139,9 @@
                     </div>
                 </div>
             </a>
-        </section>
     </main>
 
-    <footer>
+    <footer id="pied">
         <h2 class="footerTitre">ohmyfood</h2>
         <ul class="footerMenu">
             <li><i class="fas fa-utensils"></i>&nbsp; Proposer un restaurant</li>
@@ -141,6 +150,7 @@
             <li><a href="mailto:" class="footerContact">Contact</a></li>
         </ul>
     </footer>
+    </section>
 </body>
 
 

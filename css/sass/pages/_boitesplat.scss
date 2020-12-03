@@ -2,18 +2,51 @@
 
 @keyframes animeBoite {
     from {
-        margin-left: 100%;
-        width: 300%;
+        opacity: 0;
+        margin-top: 30px;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
     }
     to {
-        margin-left: 15px;
         width: 100%;
     }
 }
 
 .boiteMenu {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    height: 70px;
+    max-width: 350px;
+    min-width: 300px;
+    background-color: $couleurFondPlat;
+    border-radius: 20px;
+    margin: 0 auto 10px auto;
+    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .2);
+    .menuPlat {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 350px;
+        width: 100%;
+    }
+    .selection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        width: 60px;
+        border-radius: 0 20px 20px 0;
+        background-color: #99E2D0;
+        color: white;
+        font-size: 1.3em;
+    }
 }
 
 .boitesMenuPlat {
@@ -33,27 +66,15 @@
     padding-top: 30px;
 }
 
-.menuPlat {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 70px;
-    max-width: 350px;
-    min-width: 300px;
-    background-color: $couleurFondPlat;
-    border-radius: 20px;
-    margin: 0 auto 10px auto;
-}
-
-.menuPlatE {
+.menuPlatE1 {
     animation-delay: 0s;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-name: animeBoite;
 }
 
-.menuPlatP {
+.menuPlatE2 {
     animation-delay: 2s;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-name: animeBoite;
 }
 
@@ -75,5 +96,20 @@
     padding: 0 15px;
     .prix {
         font-weight: bold;
+    }
+}
+
+@media (min-width: 600px) {
+    .imageEnteteLarge {
+        margin: auto;
+        max-width: 60%;
+    }
+    .titreMenu {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .menuPageTitre {
+        margin-left: 25%;
     }
 }
