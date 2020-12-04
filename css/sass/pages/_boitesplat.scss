@@ -48,12 +48,33 @@
     margin: 0 auto 10px auto;
     box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .2);
     overflow: hidden;
+     :hover+.selection {
+        transform: translate(-59px, 0vh)
+    }
+    .platLigneTitre {
+        font-family: $policeTexteG;
+        padding-left: 15px;
+    }
+    .platLignePrix {
+        display: flex;
+        justify-content: space-between;
+        font-family: $policeTexte;
+        padding: 0 15px;
+        .prix {
+            font-weight: bold;
+        }
+    }
     .menuPlat {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 350px;
         width: 100%;
+        &:hover {
+            animation-duration: 500ms;
+            animation-name: reductionBoite;
+            width: 290px;
+        }
     }
     .selection {
         display: flex;
@@ -68,21 +89,13 @@
         transition: transform 500ms ease-in-out;
         margin-right: -60px;
     }
-     :hover+.selection {
-        transform: translate(-59px, 0vh)
-    }
-     :hover {
-        animation-duration: 500ms;
-        animation-name: reductionBoite;
-        width: 270px;
-    }
     .selectionRoule {
         transform: rotate(-190deg);
     }
      :hover+.selectionRoule {
         animation-duration: 500ms;
-        danimation-name: animeSelect;
-        transform: rotate(180deg);
+        animation-name: animeSelect;
+        transform: rotate(0deg);
     }
 }
 
@@ -119,21 +132,6 @@
     animation-delay: 4s;
     animation-duration: 4s;
     animation-name: animeBoite;
-}
-
-.platLigneTitre {
-    font-family: $policeTexteG;
-    padding-left: 15px;
-}
-
-.platLignePrix {
-    display: flex;
-    justify-content: space-between;
-    font-family: $policeTexte;
-    padding: 0 15px;
-    .prix {
-        font-weight: bold;
-    }
 }
 
 @media (min-width: 600px) {

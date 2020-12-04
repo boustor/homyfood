@@ -436,12 +436,33 @@ a {
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
+.boiteMenu :hover + .selection {
+  transform: translate(-59px, 0vh);
+}
+.boiteMenu .platLigneTitre {
+  font-family: roboto-bold;
+  padding-left: 15px;
+}
+.boiteMenu .platLignePrix {
+  display: flex;
+  justify-content: space-between;
+  font-family: roboto;
+  padding: 0 15px;
+}
+.boiteMenu .platLignePrix .prix {
+  font-weight: bold;
+}
 .boiteMenu .menuPlat {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 350px;
   width: 100%;
+}
+.boiteMenu .menuPlat:hover {
+  animation-duration: 500ms;
+  animation-name: reductionBoite;
+  width: 290px;
 }
 .boiteMenu .selection {
   display: flex;
@@ -456,21 +477,13 @@ a {
   transition: transform 500ms ease-in-out;
   margin-right: -60px;
 }
-.boiteMenu :hover + .selection {
-  transform: translate(-59px, 0vh);
-}
-.boiteMenu :hover {
-  animation-duration: 500ms;
-  animation-name: reductionBoite;
-  width: 270px;
-}
 .boiteMenu .selectionRoule {
   transform: rotate(-190deg);
 }
 .boiteMenu :hover + .selectionRoule {
   animation-duration: 500ms;
-  danimation-name: animeSelect;
-  transform: rotate(180deg);
+  animation-name: animeSelect;
+  transform: rotate(0deg);
 }
 
 .boitesMenuPlat {
@@ -506,21 +519,6 @@ a {
   animation-delay: 4s;
   animation-duration: 4s;
   animation-name: animeBoite;
-}
-
-.platLigneTitre {
-  font-family: roboto-bold;
-  padding-left: 15px;
-}
-
-.platLignePrix {
-  display: flex;
-  justify-content: space-between;
-  font-family: roboto;
-  padding: 0 15px;
-}
-.platLignePrix .prix {
-  font-weight: bold;
 }
 
 @media (min-width: 600px) {
