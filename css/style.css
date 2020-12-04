@@ -408,6 +408,22 @@ a {
     width: 100%;
   }
 }
+@keyframes reductionBoite {
+  from {
+    width: 350px;
+  }
+  to {
+    width: 290px;
+  }
+}
+@keyframes animeSelect {
+  from {
+    transform: rotate(-190deg);
+  }
+  to {
+    transform: rotate(190deg);
+  }
+}
 .boiteMenu {
   display: flex;
   justify-content: space-between;
@@ -418,6 +434,7 @@ a {
   border-radius: 20px;
   margin: 0 auto 10px auto;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 .boiteMenu .menuPlat {
   display: flex;
@@ -436,6 +453,24 @@ a {
   background-color: #99E2D0;
   color: white;
   font-size: 1.3em;
+  transition: transform 500ms ease-in-out;
+  margin-right: -60px;
+}
+.boiteMenu :hover + .selection {
+  transform: translate(-59px, 0vh);
+}
+.boiteMenu :hover {
+  animation-duration: 500ms;
+  animation-name: reductionBoite;
+  width: 270px;
+}
+.boiteMenu .selectionRoule {
+  transform: rotate(-190deg);
+}
+.boiteMenu :hover + .selectionRoule {
+  animation-duration: 500ms;
+  danimation-name: animeSelect;
+  transform: rotate(180deg);
 }
 
 .boitesMenuPlat {
