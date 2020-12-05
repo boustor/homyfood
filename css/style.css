@@ -27,7 +27,8 @@
 }
 
 .titreChapitre {
-  margin-left: 15px;
+  font-family: roboto-bold;
+  margin-left: 10px;
 }
 
 /* ********** partie fonctionnement ********** */
@@ -48,6 +49,16 @@
   font-family: roboto-med;
   margin-bottom: 15px;
   box-shadow: 0.3em 0.3em 0.3em #ededed;
+}
+.fonctionnementCadre .fonctionnementCadreLogo {
+  opacity: 0.5;
+}
+.fonctionnementCadre:hover {
+  background-color: #f5edff;
+}
+.fonctionnementCadre:hover .fonctionnementCadreLogo {
+  opacity: 1;
+  color: #9356dc;
 }
 
 .fonctionnementCadreLigne {
@@ -73,6 +84,7 @@
 /* ********** les boites des restaurants ********** */
 .listeRestaurant {
   background-color: #f6f6f6;
+  padding-bottom: 50px;
 }
 .listeRestaurant a {
   text-decoration: none;
@@ -84,6 +96,7 @@
   background-color: white;
   margin: 0 auto 20px auto;
   border-radius: 20px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
 }
 .listeRestaurant .boiteRestaurant .boiteRestaurantImagePosition {
   position: relative;
@@ -263,6 +276,7 @@
 body {
   margin: auto;
   max-width: 1024px;
+  font-family: roboto-med;
 }
 
 a {
@@ -393,7 +407,7 @@ a {
 @keyframes animeBoite {
   from {
     opacity: 0;
-    margin-top: 30px;
+    emargin-top: 30px;
   }
   25% {
     opacity: 0.25;
@@ -505,19 +519,19 @@ a {
 
 .menuPlatE1 {
   animation-delay: 0s;
-  animation-duration: 2s;
+  animation-duration: 500ms;
   animation-name: animeBoite;
 }
 
 .menuPlatE2 {
-  animation-delay: 2s;
-  animation-duration: 2s;
+  animation-delay: 500s;
+  animation-duration: 500ms;
   animation-name: animeBoite;
 }
 
 .menuPlatD {
-  animation-delay: 4s;
-  animation-duration: 4s;
+  animation-delay: 500s;
+  animation-duration: 500ms;
   animation-name: animeBoite;
 }
 
@@ -547,7 +561,7 @@ a {
   height: 50px;
   border-radius: 30px;
   padding: 0 20px 0 20px;
-  font-family: roboto-M;
+  font-family: roboto-med;
   color: white;
   font-size: 1.1em;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.33);
@@ -613,14 +627,15 @@ footer {
 }
 footer .footerTitre {
   font-family: Shrikhand;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 100;
   padding-bottom: 10px;
 }
 footer .footerMenu {
   list-style: none;
-  font-family: roboto-M;
-  font-size: 0.8em;
+  font-family: roboto;
+  font-size: 0.9em;
+  font-weight: bold;
   padding-left: 0;
 }
 footer .footerMenu li {

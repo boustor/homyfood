@@ -3,7 +3,7 @@
 @keyframes animeBoite {
     from {
         opacity: 0;
-        margin-top: 30px;
+        emargin-top: 30px;
     }
     25% {
         opacity: .25;
@@ -118,19 +118,19 @@
 
 .menuPlatE1 {
     animation-delay: 0s;
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-name: animeBoite;
 }
 
 .menuPlatE2 {
-    animation-delay: 2s;
-    animation-duration: 2s;
+    animation-delay: 500s;
+    animation-duration: 500ms;
     animation-name: animeBoite;
 }
 
 .menuPlatD {
-    animation-delay: 4s;
-    animation-duration: 4s;
+    animation-delay: 500s;
+    animation-duration: 500ms;
     animation-name: animeBoite;
 }
 

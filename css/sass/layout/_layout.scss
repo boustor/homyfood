@@ -27,7 +27,8 @@
    }
    
    .titreChapitre {
-       margin-left: 15px;
+       font-family: $policeTexteG;
+       margin-left: 10px;
    }
    /* ********** partie fonctionnement ********** */
    
@@ -48,6 +49,16 @@
        font-family: roboto-med;
        margin-bottom: 15px;
        box-shadow: 0.3em 0.3em 0.3em #ededed;
+       .fonctionnementCadreLogo {
+           opacity: .5;
+       }
+       &:hover {
+           background-color: #f5edff;
+       }
+       &:hover .fonctionnementCadreLogo {
+           opacity: 1;
+           color: #9356dc;
+       }
    }
    
    .fonctionnementCadreLigne {
@@ -73,6 +84,7 @@
    
    .listeRestaurant {
        background-color: #f6f6f6;
+       padding-bottom: 50px;
        a {
            text-decoration: none;
            color: black;
@@ -83,6 +95,7 @@
            background-color: white;
            margin: 0 auto 20px auto;
            border-radius: 20px;
+           box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .1);
            .boiteRestaurantImagePosition {
                position: relative;
            }
