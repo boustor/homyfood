@@ -452,7 +452,7 @@ a {
   transform: translate(-59px, 0vh);
 }
 .boiteMenu:hover .selectionRoule {
-  animation-duration: 500ms;
+  animation-duration: 800ms;
   animation-name: animeSelect;
 }
 .boiteMenu:hover > .menuPlat {
@@ -477,6 +477,13 @@ a {
 }
 .boiteMenu:hover .troisPoints {
   display: inline;
+  margin-right: 10px;
+}
+.boiteMenu:hover .descriptionPoints {
+  width: 150px;
+  text-indent: -150px;
+  padding-right: 200px;
+  overflow: hidden;
 }
 
 .menuPlat {
