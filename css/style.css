@@ -157,7 +157,6 @@
 /* ********** menu des autres pages ********** */
 .menuPage {
   position: relative;
-  border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
   margin-top: -40px;
   z-index: 1;
@@ -287,10 +286,6 @@ a {
   body {
     margin: auto;
   }
-
-  .lieu {
-    border-radius: 20px;
-  }
 }
 @font-face {
   font-family: "Shrikhand";
@@ -404,19 +399,21 @@ a {
   }
 }
 /* ********** boites des plats ********** */
+@keyframes cacheBoite {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes animeBoite {
   from {
     opacity: 0;
-    emargin-top: 30px;
-  }
-  25% {
-    opacity: 0.25;
+    margin-top: 20px;
   }
   50% {
     opacity: 0.5;
-  }
-  75% {
-    opacity: 0.75;
   }
   to {
     width: 100%;
@@ -432,49 +429,33 @@ a {
 }
 @keyframes animeSelect {
   from {
-    transform: rotate(-190deg);
+    transform: rotate(360deg);
   }
   to {
-    transform: rotate(190deg);
+    transform: rotate(0deg);
   }
 }
 .boiteMenu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 70px;
   max-width: 350px;
   min-width: 300px;
   background-color: white;
   border-radius: 20px;
   margin: 0 auto 10px auto;
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-.boiteMenu :hover + .selection {
+.boiteMenu:hover .selection {
   transform: translate(-59px, 0vh);
 }
-.boiteMenu .platLigneTitre {
-  font-family: roboto-bold;
-  padding-left: 15px;
-}
-.boiteMenu .platLignePrix {
-  display: flex;
-  justify-content: space-between;
-  font-family: roboto;
-  padding: 0 15px;
-}
-.boiteMenu .platLignePrix .prix {
-  font-weight: bold;
-}
-.boiteMenu .menuPlat {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 350px;
-  width: 100%;
-}
-.boiteMenu .menuPlat:hover {
+.boiteMenu:hover .selectionRoule {
   animation-duration: 500ms;
+  animation-name: animeSelect;
+}
+.boiteMenu:hover > .menuPlat {
   animation-name: reductionBoite;
   width: 290px;
 }
@@ -491,13 +472,36 @@ a {
   transition: transform 500ms ease-in-out;
   margin-right: -60px;
 }
-.boiteMenu .selectionRoule {
-  transform: rotate(-190deg);
+.boiteMenu .troisPoints {
+  display: none;
 }
-.boiteMenu :hover + .selectionRoule {
-  animation-duration: 500ms;
-  animation-name: animeSelect;
-  transform: rotate(0deg);
+.boiteMenu:hover .troisPoints {
+  display: inline;
+}
+
+.menuPlat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  width: 100%;
+  transition: all 500ms;
+}
+.menuPlat .platLigneTitre {
+  font-family: roboto-bold;
+  padding-left: 15px;
+  width: 230px;
+}
+.menuPlat .platLignePrix {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-family: roboto;
+  padding: 0 15px;
+}
+.menuPlat .platLignePrix .prix {
+  font-weight: bold;
+  width: 40px;
 }
 
 .boitesMenuPlat {
@@ -517,21 +521,23 @@ a {
   padding-top: 30px;
 }
 
-.menuPlatE1 {
-  animation-delay: 0s;
-  animation-duration: 500ms;
-  animation-name: animeBoite;
+.cacheE2 {
+  animation-duration: 400ms;
 }
 
-.menuPlatE2 {
-  animation-delay: 500s;
-  animation-duration: 500ms;
-  animation-name: animeBoite;
+.cacheE3 {
+  animation-duration: 800ms;
 }
 
-.menuPlatD {
-  animation-delay: 500s;
-  animation-duration: 500ms;
+.cacheE2,
+.cacheE3 {
+  animation-name: cacheBoite;
+}
+
+.menuPlatE1,
+.menuPlatE2,
+.menuPlatE3 {
+  animation-duration: 800ms;
   animation-name: animeBoite;
 }
 
@@ -542,7 +548,7 @@ a {
   }
 
   .titreMenu {
-    max-width: 80%;
+    max-width: 50%;
     margin-left: auto;
     margin-right: auto;
   }

@@ -1,150 +1,162 @@
-/* ********** boites des plats ********** */
-
-@keyframes animeBoite {
-    from {
-        opacity: 0;
-        emargin-top: 30px;
-    }
-    25% {
-        opacity: .25;
-    }
-    50% {
-        opacity: .5;
-    }
-    75% {
-        opacity: .75;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes reductionBoite {
-    from {
-        width: 350px;
-    }
-    to {
-        width: 290px;
-    }
-}
-
-@keyframes animeSelect {
-    from {
-        transform: rotate(-190deg);
-    }
-    to {
-        transform: rotate(190deg);
-    }
-}
-
-.boiteMenu {
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    max-width: 350px;
-    min-width: 300px;
-    background-color: $couleurFondPlat;
-    border-radius: 20px;
-    margin: 0 auto 10px auto;
-    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .2);
-    overflow: hidden;
-     :hover+.selection {
-        transform: translate(-59px, 0vh)
-    }
-    .platLigneTitre {
-        font-family: $policeTexteG;
-        padding-left: 15px;
-    }
-    .platLignePrix {
-        display: flex;
-        justify-content: space-between;
-        font-family: $policeTexte;
-        padding: 0 15px;
-        .prix {
-            font-weight: bold;
+        /* ********** boites des plats ********** */
+        
+        @keyframes cacheBoite {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-    }
-    .menuPlat {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 350px;
-        width: 100%;
-        &:hover {
-            animation-duration: 500ms;
-            animation-name: reductionBoite;
-            width: 290px;
+        
+        @keyframes animeBoite {
+            from {
+                opacity: 0;
+                margin-top: 20px;
+            }
+            50% {
+                opacity: .5;
+            }
+            to {
+                width: 100%;
+            }
         }
-    }
-    .selection {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 70px;
-        width: 60px;
-        border-radius: 0 20px 20px 0;
-        background-color: #99E2D0;
-        color: white;
-        font-size: 1.3em;
-        transition: transform 500ms ease-in-out;
-        margin-right: -60px;
-    }
-    .selectionRoule {
-        transform: rotate(-190deg);
-    }
-     :hover+.selectionRoule {
-        animation-duration: 500ms;
-        animation-name: animeSelect;
-        transform: rotate(0deg);
-    }
-}
-
-.boitesMenuPlat {
-    display: flex;
-    flex-direction: column;
-}
-
-.menuPageTitre {
-    margin-left: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: solid $soulignerTitreMenu;
-    width: 40px;
-}
-
-.menuPageTitreP {
-    padding-top: 30px;
-}
-
-.menuPlatE1 {
-    animation-delay: 0s;
-    animation-duration: 500ms;
-    animation-name: animeBoite;
-}
-
-.menuPlatE2 {
-    animation-delay: 500s;
-    animation-duration: 500ms;
-    animation-name: animeBoite;
-}
-
-.menuPlatD {
-    animation-delay: 500s;
-    animation-duration: 500ms;
-    animation-name: animeBoite;
-}
-
-@media (min-width: 600px) {
-    .imageEnteteLarge {
-        margin: auto;
-        max-width: 60%;
-    }
-    .titreMenu {
-        max-width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .menuPageTitre {
-        margin-left: 25%;
-    }
-}
+        
+        @keyframes reductionBoite {
+            from {
+                width: 350px;
+            }
+            to {
+                width: 290px;
+            }
+        }
+        
+        @keyframes animeSelect {
+            from {
+                transform: rotate(360deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+        }
+        
+        .boiteMenu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            max-width: 350px;
+            min-width: 300px;
+            background-color: $couleurFondPlat;
+            border-radius: 20px;
+            margin: 0 auto 10px auto;
+            box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .1);
+            overflow: hidden;
+            &:hover .selection {
+                transform: translate(-59px, 0vh);
+            }
+            &:hover .selectionRoule {
+                animation-duration: 500ms;
+                animation-name: animeSelect;
+            }
+            &:hover>.menuPlat {
+                animation-name: reductionBoite;
+                width: 290px;
+            }
+            .selection {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70px;
+                width: 60px;
+                border-radius: 0 20px 20px 0;
+                background-color: #99E2D0;
+                color: white;
+                font-size: 1.3em;
+                transition: transform 500ms ease-in-out;
+                margin-right: -60px;
+            }
+            .troisPoints {
+                display: none;
+            }
+            &:hover .troisPoints {
+                display: inline;
+            }
+        }
+        
+        .menuPlat {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 350px;
+            width: 100%;
+            transition: all 500ms;
+            .platLigneTitre {
+                font-family: $policeTexteG;
+                padding-left: 15px;
+                width: 230px;
+            }
+            .platLignePrix {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 5px;
+                font-family: $policeTexte;
+                padding: 0 15px;
+                .prix {
+                    font-weight: bold;
+                    width: 40px;
+                }
+            }
+        }
+        
+        .boitesMenuPlat {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .menuPageTitre {
+            margin-left: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: solid $soulignerTitreMenu;
+            width: 40px;
+        }
+        
+        .menuPageTitreP {
+            padding-top: 30px;
+        }
+        
+        .cacheE2 {
+            animation-duration: 400ms;
+        }
+        
+        .cacheE3 {
+            animation-duration: 800ms;
+        }
+        
+        .cacheE2,
+        .cacheE3 {
+            animation-name: cacheBoite;
+        }
+        
+        .menuPlatE1,
+        .menuPlatE2,
+        .menuPlatE3 {
+            animation-duration: 800ms;
+            animation-name: animeBoite;
+        }
+        
+        @media (min-width: 600px) {
+            .imageEnteteLarge {
+                margin: auto;
+                max-width: 60%;
+            }
+            .titreMenu {
+                max-width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .menuPageTitre {
+                margin-left: 25%;
+            }
+        }
