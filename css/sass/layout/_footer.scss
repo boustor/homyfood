@@ -12,7 +12,7 @@ footer {
     .footerMenu {
         list-style: none;
         font-family: $policeTexte;
-        font-size: .9em;
+        font-size: 1em;
         font-weight: bold;
         padding-left: 0;
         li {
@@ -21,5 +21,9 @@ footer {
     }
     .footerContact {
         color: white;
+    }
+    .tailleImagePied {
+        width: 25px;
+        font-size: 0.75em;
     }
 }

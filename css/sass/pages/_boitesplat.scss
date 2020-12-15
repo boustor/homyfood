@@ -15,7 +15,7 @@
                 margin-top: 20px;
             }
             50% {
-                opacity: .5;
+                opacity: .7;
             }
             to {
                 width: 100%;
@@ -76,18 +76,13 @@
                 transition: transform 500ms ease-in-out;
                 margin-right: -60px;
             }
-            .troisPoints {
-                display: none;
-            }
-            &:hover .troisPoints {
-                display: inline;
-                margin-right: 10px;
+            .descriptionPoints {
+                white-space: nowrap;
+                overflow: hidden;
             }
             &:hover .descriptionPoints {
-                width: 150px;
-                text-indent: -150px;
-                padding-right: 200px;
-                overflow: hidden;
+                width: 215px;
+                text-overflow: ellipsis;
             }
         }
         
@@ -101,7 +96,11 @@
             .platLigneTitre {
                 font-family: $policeTexteG;
                 padding-left: 15px;
-                width: 230px;
+                width: 250px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
             .platLignePrix {
                 display: flex;
@@ -109,9 +108,11 @@
                 margin-top: 5px;
                 font-family: $policeTexte;
                 padding: 0 15px;
+                font-size: 15px;
                 .prix {
-                    font-weight: bold;
                     width: 40px;
+                    margin-left: 5px;
+                    font-family: $policeTexteG;
                 }
             }
         }
@@ -154,10 +155,6 @@
         }
         
         @media (min-width: 600px) {
-            .imageEnteteLarge {
-                margin: auto;
-                max-width: 60%;
-            }
             .titreMenu {
                 max-width: 50%;
                 margin-left: auto;
@@ -165,5 +162,22 @@
             }
             .menuPageTitre {
                 margin-left: 25%;
+            }
+            .menuPage {
+                border-radius: 0;
+            }
+        }
+        
+        @media (width: 320px) {
+            .titreMenu {
+                max-width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .menuPageTitre {
+                margin-left: 25%;
+            }
+            .menuPage {
+                border-radius: 0;
             }
         }
