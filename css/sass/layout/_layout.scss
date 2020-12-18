@@ -149,9 +149,9 @@
    /* ********** images présentation des autres pages ********** */
    
    .imageEntete {
+       object-fit: cover;
        height: 260px;
        width: 100%;
-       z-index: 0;
    }
    /* ********** menu des autres pages ********** */
    

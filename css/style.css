@@ -149,9 +149,9 @@
 
 /* ********** images présentation des autres pages ********** */
 .imageEntete {
+  object-fit: cover;
   height: 260px;
   width: 100%;
-  z-index: 0;
 }
 
 /* ********** menu des autres pages ********** */
@@ -426,7 +426,7 @@ a {
     opacity: 0.7;
   }
   to {
-    width: 100%;
+    opacity: 1;
   }
 }
 @keyframes reductionBoite {
@@ -450,8 +450,7 @@ a {
   justify-content: space-between;
   align-items: center;
   height: 70px;
-  max-width: 350px;
-  min-width: 300px;
+  width: 350px;
   background-color: white;
   border-radius: 20px;
   margin: 0 auto 10px auto;
@@ -483,12 +482,12 @@ a {
   margin-right: -60px;
 }
 .boiteMenu .descriptionPoints {
-  ddwhite-space: nowrap;
-  doverflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 270px;
+  text-overflow: ellipsis;
 }
 .boiteMenu:hover .descriptionPoints {
-  overflow: hidden;
-  white-space: nowrap;
   width: 215px;
   text-overflow: ellipsis;
 }
@@ -498,7 +497,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   width: 350px;
-  width: 100%;
   transition: all 500ms;
 }
 .menuPlat .platLigneTitre {
@@ -577,18 +575,32 @@ a {
   }
 }
 @media (width: 320px) {
-  .titreMenu {
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .menuPageTitre {
     margin-left: 25%;
   }
 
   .menuPage {
     border-radius: 0;
+  }
+
+  .boiteMenu {
+    width: 280px;
+  }
+  .boiteMenu .menuPlat {
+    width: 280px;
+  }
+  .boiteMenu .menuPlat .platLigneTitre {
+    width: 200px;
+  }
+  .boiteMenu .descriptionPoints {
+    width: 240px;
+    text-overflow: ellipsis;
+  }
+  .boiteMenu:hover .descriptionPoints {
+    width: 185px;
+  }
+  .boiteMenu:hover > .menuPlat {
+    width: 220px;
   }
 }
 .presentationBouton {

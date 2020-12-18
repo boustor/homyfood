@@ -1,185 +1,197 @@
-        /* ********** boites des plats ********** */
-        
-        @keyframes cacheBoite {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        @keyframes animeBoite {
-            from {
-                opacity: 0;
-                margin-top: 20px;
-            }
-            50% {
-                opacity: .7;
-            }
-            to {
-                width: 100%;
-            }
-        }
-        
-        @keyframes reductionBoite {
-            from {
-                width: 350px;
-            }
-            to {
-                width: 290px;
-            }
-        }
-        
-        @keyframes animeSelect {
-            from {
-                transform: rotate(360deg);
-            }
-            to {
-                transform: rotate(0deg);
-            }
-        }
-        
-        .boiteMenu {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-            max-width: 350px;
-            min-width: 300px;
-            background-color: $couleurFondPlat;
-            border-radius: 20px;
-            margin: 0 auto 10px auto;
-            box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .1);
-            overflow: hidden;
-            &:hover .selection {
-                transform: translate(-59px, 0vh);
-            }
-            &:hover .selectionRoule {
-                animation-duration: 800ms;
-                animation-name: animeSelect;
-            }
-            &:hover>.menuPlat {
-                animation-name: reductionBoite;
-                width: 290px;
-            }
-            .selection {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 70px;
-                width: 60px;
-                border-radius: 0 20px 20px 0;
-                background-color: #99E2D0;
-                color: white;
-                font-size: 1.3em;
-                transition: transform 500ms ease-in-out;
-                margin-right: -60px;
-            }
-            .descriptionPoints {
-                ddwhite-space: nowrap;
-                doverflow: hidden;
-            }
-            &:hover .descriptionPoints {
-                overflow: hidden;
-                white-space: nowrap;
-                width: 215px;
-                text-overflow: ellipsis;
-            }
-        }
-        
-        .menuPlat {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 350px;
-            width: 100%;
-            transition: all 500ms;
-            .platLigneTitre {
-                font-family: $policeTexteG;
-                padding-left: 15px;
-                width: 250px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            .platLignePrix {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 5px;
-                font-family: $policeTexte;
-                padding: 0 15px;
-                font-size: 15px;
-                .prix {
-                    width: 40px;
-                    margin-left: 5px;
-                    font-family: $policeTexteG;
+                /* ********** boites des plats ********** */
+                
+                @keyframes cacheBoite {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
                 }
-            }
-        }
-        
-        .boitesMenuPlat {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .menuPageTitre {
-            margin-left: 15px;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-            border-bottom: solid $soulignerTitreMenu;
-            width: 40px;
-        }
-        
-        .menuPageTitreP {
-            padding-top: 30px;
-        }
-        
-        .cacheE2 {
-            animation-duration: 400ms;
-        }
-        
-        .cacheE3 {
-            animation-duration: 800ms;
-        }
-        
-        .cacheE2,
-        .cacheE3 {
-            animation-name: cacheBoite;
-        }
-        
-        .menuPlatE1,
-        .menuPlatE2,
-        .menuPlatE3 {
-            animation-duration: 800ms;
-            animation-name: animeBoite;
-        }
-        
-        @media (min-width: 600px) {
-            .titreMenu {
-                max-width: 50%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .menuPageTitre {
-                margin-left: 25%;
-            }
-            .menuPage {
-                border-radius: 0;
-            }
-        }
-        
-        @media (width: 320px) {
-            .titreMenu {
-                max-width: 50%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .menuPageTitre {
-                margin-left: 25%;
-            }
-            .menuPage {
-                border-radius: 0;
-            }
-        }
+                
+                @keyframes animeBoite {
+                    from {
+                        opacity: 0;
+                        margin-top: 20px;
+                    }
+                    50% {
+                        opacity: .7;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+                
+                @keyframes reductionBoite {
+                    from {
+                        width: 350px;
+                    }
+                    to {
+                        width: 290px;
+                    }
+                }
+                
+                @keyframes animeSelect {
+                    from {
+                        transform: rotate(360deg);
+                    }
+                    to {
+                        transform: rotate(0deg);
+                    }
+                }
+                
+                .boiteMenu {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 70px;
+                    width: 350px;
+                    background-color: $couleurFondPlat;
+                    border-radius: 20px;
+                    margin: 0 auto 10px auto;
+                    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0, .1);
+                    overflow: hidden;
+                    &:hover .selection {
+                        transform: translate(-59px, 0vh);
+                    }
+                    &:hover .selectionRoule {
+                        animation-duration: 800ms;
+                        animation-name: animeSelect;
+                    }
+                    &:hover>.menuPlat {
+                        animation-name: reductionBoite;
+                        width: 290px;
+                    }
+                    .selection {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 70px;
+                        width: 60px;
+                        border-radius: 0 20px 20px 0;
+                        background-color: #99E2D0;
+                        color: white;
+                        font-size: 1.3em;
+                        transition: transform 500ms ease-in-out;
+                        margin-right: -60px;
+                    }
+                    .descriptionPoints {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 270px;
+                        text-overflow: ellipsis;
+                    }
+                    &:hover .descriptionPoints {
+                        width: 215px;
+                        text-overflow: ellipsis;
+                    }
+                }
+                
+                .menuPlat {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 350px;
+                    transition: all 500ms;
+                    .platLigneTitre {
+                        font-family: $policeTexteG;
+                        padding-left: 15px;
+                        width: 250px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                    .platLignePrix {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 5px;
+                        font-family: $policeTexte;
+                        padding: 0 15px;
+                        font-size: 15px;
+                        .prix {
+                            width: 40px;
+                            margin-left: 5px;
+                            font-family: $policeTexteG;
+                        }
+                    }
+                }
+                
+                .boitesMenuPlat {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                .menuPageTitre {
+                    margin-left: 15px;
+                    margin-bottom: 15px;
+                    padding-bottom: 5px;
+                    border-bottom: solid $soulignerTitreMenu;
+                    width: 40px;
+                }
+                
+                .menuPageTitreP {
+                    padding-top: 30px;
+                }
+                
+                .cacheE2 {
+                    animation-duration: 400ms;
+                }
+                
+                .cacheE3 {
+                    animation-duration: 800ms;
+                }
+                
+                .cacheE2,
+                .cacheE3 {
+                    animation-name: cacheBoite;
+                }
+                
+                .menuPlatE1,
+                .menuPlatE2,
+                .menuPlatE3 {
+                    animation-duration: 800ms;
+                    animation-name: animeBoite;
+                }
+                
+                @media (min-width: 600px) {
+                    .titreMenu {
+                        max-width: 50%;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    .menuPageTitre {
+                        margin-left: 25%;
+                    }
+                    .menuPage {
+                        border-radius: 0;
+                    }
+                }
+                
+                @media (width: 320px) {
+                    .menuPageTitre {
+                        margin-left: 25%;
+                    }
+                    .menuPage {
+                        border-radius: 0;
+                    }
+                    .boiteMenu {
+                        width: 280px;
+                        .menuPlat {
+                            width: 280px;
+                            .platLigneTitre {
+                                width: 200px;
+                            }
+                        }
+                        .descriptionPoints {
+                            width: 240px;
+                            text-overflow: ellipsis;
+                        }
+                        &:hover .descriptionPoints {
+                            width: 185px;
+                        }
+                        &:hover>.menuPlat {
+                            width: 220px;
+                        }
+                    }
+                }
