@@ -77,10 +77,12 @@
                 margin-right: -60px;
             }
             .descriptionPoints {
-                white-space: nowrap;
-                overflow: hidden;
+                ddwhite-space: nowrap;
+                doverflow: hidden;
             }
             &:hover .descriptionPoints {
+                overflow: hidden;
+                white-space: nowrap;
                 width: 215px;
                 text-overflow: ellipsis;
             }
