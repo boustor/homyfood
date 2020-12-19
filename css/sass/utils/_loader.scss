@@ -3,11 +3,7 @@
 #pied {
     animation: animationEntree 3s;
     &::before {
-        opacity: 0px;
         transition-delay: 3s;
-    }
-    &::after {
-        opacity: 1px;
     }
 }
 

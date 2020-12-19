@@ -193,13 +193,7 @@
 #entete::before,
 #main::before,
 #pied::before {
-  opacity: 0px;
   transition-delay: 3s;
-}
-#entete::after,
-#main::after,
-#pied::after {
-  opacity: 1px;
 }
 
 @keyframes animationEntree {
