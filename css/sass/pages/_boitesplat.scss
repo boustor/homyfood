@@ -168,7 +168,7 @@
                     }
                 }
                 
-                @media (width: 320px) {
+                @media (max-width: 350px) {
                     .menuPageTitre {
                         margin-left: 25%;
                     }
@@ -191,7 +191,7 @@
                             width: 185px;
                         }
                         &:hover>.menuPlat {
-                            width: 220px;
+                            width: 240px;
                         }
                     }
                 }
